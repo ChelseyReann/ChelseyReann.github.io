@@ -1,0 +1,121 @@
+body{
+    background-color: #ece7e1;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+/* Define the main Navigation block */
+.myNav {
+    display: block;
+    height: 50px;
+    line-height: 50px;
+}
+
+/* Remove bullets, margin and padding */
+.myNav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    bottom: 40px;
+    text-align: center;
+    width: 100%;
+    z-index: 10;
+}
+
+.myNav li {
+    display: inline;
+}
+
+/* Define the block styling for the links */
+.myNav li a {
+    display: inline-block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: black;
+}
+
+li:hover {
+    border-bottom: 3px solid black;
+}
+
+
+img {
+    padding-top: 3rem;
+    padding-right: 4rem;
+}
+
+.tuned{
+    width: 30rem;
+    animation: slidein infinite 3s;
+    -webkit-animation: slidein infinite 3s;
+    -moz-animation: slidein infinite 3s;
+    -o-animation: slidein infinite 3s;
+}
+
+@keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 5rem;
+    }
+  
+    to {
+      margin-left: 20%;
+      width: 30rem;
+    }
+}
+
+.parent{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#bio {
+    inline-size: 35%;
+    padding-top: 1rem
+}
+
+@media screen and (max-width: 576px){
+    body{
+        text-align: center;
+    }
+    
+    .parent {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    #bio{
+        font-size: 70%;
+        padding-left: 0;
+        inline-size: 50%;
+    }
+
+    img {
+        width: 40%;
+        padding-right: 0;
+       
+    }
+
+    .tuned{
+        width: 20rem;
+    }
+
+    @keyframes slidein {
+        from {
+          margin-left: 100%;
+          width: 5rem;
+        }
+      
+        to {
+          margin-left: 1%;
+          width: 20rem;
+        }
+    }
+}

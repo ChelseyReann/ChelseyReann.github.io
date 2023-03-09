@@ -1,0 +1,89 @@
+body{
+    background-color: #1a1818;
+    color: #ece7e1;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1{
+    font-weight: lighter;
+}
+
+.connect{
+    text-align: left;
+    font-size: 50px;
+    line-height: 12px;
+    text-decoration: underline;
+    margin-left: 5%;
+    margin-top: 10%
+}
+p{
+    margin-left: 5%;
+    margin-top: 5%
+}
+.email{
+    color: #ece7e1;
+}
+
+/* Define the main Navigation block */
+.myNav {
+    display: block;
+    height: 50px;
+    line-height: 50px;
+}
+
+/* Remove bullets, margin and padding */
+.myNav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    bottom: 40px;
+    text-align: center;
+    width: 100%;
+    z-index: 10;
+}
+.myNav li {
+    display: inline;
+}
+/* Define the block styling for the links */
+.myNav li a {
+    display: inline-block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: #ece7e1;
+}
+
+.line:hover{
+    text-decoration: underline;
+}
+
+li:hover {
+    border-bottom: 3px solid #ece7e1;
+    padding: 5px;
+  }
+
+img{
+    width: 30%;
+    position: fixed;
+    left: 55%;
+    margin-top: -15%
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+@media screen and (max-width: 576px){
+    .container{
+        margin: 50%;
+    }
+
+    img{
+        width: 80%;
+        position: fixed;
+        left: 10%;
+       
+    }
+}
