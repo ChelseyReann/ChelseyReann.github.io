@@ -15,6 +15,7 @@ body {
     -moz-animation: myAnimation alternate infinite 10s;
     -o-animation: myAnimation alternate infinite 10s;
   }
+  
   @keyframes myAnimation {
     25% {
       background-image: url("assets/luna2.jpeg");
