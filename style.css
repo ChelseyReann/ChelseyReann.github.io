@@ -115,6 +115,61 @@ img {
     padding-top: 1rem
 }
 
+.project-tech {
+    display: none
+}
+
+.project-one:hover > .project-tech {
+    display: block;
+  }
+
+.project-two:hover > .project-tech {
+    display: block;
+  }
+
+.project-three:hover > .project-tech {
+    display: block;
+  }
+
+.project-container {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.project-one {
+    background-image: url(./assets/tv-background.png);
+    background-position: center;
+    background-size: cover;
+    height: 40vh;
+    width: 40vh;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+    color: white;
+    margin-left: 2rem;
+}
+
+.project-two {
+    background-image: url(./assets/tic-tac-toe.png);
+    background-position: center;
+    background-size: cover;
+    height: 40vh;
+    width: 40vh;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+    color: white;
+    margin-left: 2rem;
+}
+
+.project-three {
+    background-image: url(./assets/bestselling.png);
+    background-position: center;
+    background-size: cover;
+    height: 40vh;
+    width: 40vh;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+    color: white;
+    margin-left: 2rem;
+}
+
 @media screen and (max-width: 576px){
     body{
         text-align: center;
