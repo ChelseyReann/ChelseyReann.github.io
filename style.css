@@ -134,6 +134,7 @@ img {
 .project-container {
     display: flex;
     flex-direction: row;
+    justify-content: center;
 
 }
 
@@ -159,8 +160,14 @@ img {
     margin-left: 2rem;
 }
 
+.ptwo{
+    margin-top: 5rem;
+    color: black;
+    font-weight: bold;
+}
+
 .project-three {
-    background-image: url(./assets/bestselling.png);
+    background-image: url(./assets/books.png);
     background-position: center;
     background-size: cover;
     height: 40vh;
@@ -170,9 +177,77 @@ img {
     margin-left: 2rem;
 }
 
+.btn {
+    background-color: #ece7e1;
+    color:#131212;
+    font-family: 'Montserrat', sans-serif;
+    padding: .5rem;
+}
+
+.btn2 {
+    background-color: #131212;
+    color: #ece7e1;
+    font-family: 'Montserrat', sans-serif;
+    padding: .5rem
+}
+
+.btn:hover {
+    background-color: #131212;
+    color:#ece7e1
+}
+
+.btn2:hover {
+    background-color: #ece7e1;
+    color:#131212;
+}
+
 @media screen and (max-width: 576px){
     body{
         text-align: center;
+    }
+
+    .project-container {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .project-one {
+        margin-bottom: 2rem;
+        margin-left: 0;
+    }
+
+    .project-two {
+        margin-bottom: 2rem;
+        margin-left: 0
+    }
+
+    .project-three {
+        margin-left: 0
+    }
+
+    .project-one:hover, .project-one:active > .project-tech {
+        display: block;
+    }
+
+    .project-two:hover, .project-two:active > .project-tech {
+        display: block;
+    }
+    
+    .project-three:hover, .project-three:active > .project-tech {
+        display: block;
+    }
+
+    .btn:hover, btn:active {
+        background-color: #131212;
+        color:#ece7e1
+    }
+    
+    .btn2:hover, btn2:active {
+        background-color: #ece7e1;
+        color:#131212;
     }
     
     .parent {
@@ -193,32 +268,5 @@ img {
         width: 40%;
         padding-right: 0;
        
-    }
-
-    .tuned{
-        width: 20rem;
-        padding-bottom: 5%;
-    }
-
-    @keyframes slidein {
-        from {
-          margin-left: 100%;
-          width: 5rem;
-        }
-      
-        to {
-          margin-left: 1%;
-          width: 20rem;
-        }
-    }
-
-    .myNav ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        position: relative;
-        text-align: center;
-        width: 100%;
-        z-index: 10;
     }
 }
