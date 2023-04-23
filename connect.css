@@ -91,6 +91,7 @@ p{
     font-weight: 600;
     text-decoration: none;
     transition-duration: 0.25s;
+    text-align: center;
   }
 
   .menu__item:hover{

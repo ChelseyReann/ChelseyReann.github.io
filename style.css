@@ -71,24 +71,16 @@ body{
     font-weight: 600;
     text-decoration: none;
     transition-duration: 0.25s;
+    text-align: center;
   }
 
   .menu__item:hover{
     text-decoration: underline;
   }
 
-
 img {
     padding-top: 3rem;
     padding-right: 4rem;
-}
-
-.tuned{
-    width: 30rem;
-    animation: slidein infinite 3s;
-    -webkit-animation: slidein infinite 3s;
-    -moz-animation: slidein infinite 3s;
-    -o-animation: slidein infinite 3s;
 }
 
 .parent{
@@ -101,7 +93,7 @@ img {
 
 #bio {
     inline-size: 35%;
-    padding-top: 1rem
+    padding-top: 1rem;
 }
 
 .project-tech {
@@ -188,12 +180,6 @@ img {
 .btn2:hover {
     background-color: #ece7e1;
     color:#131212;
-}
-
-.name:hover{
-    color: lightpink;
-    animation: bounce;
-    animation-duration: 2s;
 }
 
 @media screen and (max-width: 576px){
