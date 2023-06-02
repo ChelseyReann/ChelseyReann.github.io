@@ -97,40 +97,20 @@ img {
   padding-top: 1rem;
 }
 
-.project-tech {
-  display: none;
-}
-
-/* .project-one:hover > .project-tech {
-  display: block;
-} */
-
-/* .project-two:hover > .project-tech {
-  display: block;
-} */
-
-/* .project-three:hover > .project-tech {
-  display: block;
-}
-
-.project-four:hover > .project-tech {
-  display: block;
-} */
-
-.project-container {
+/* .project-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
   gap: 1rem;
-}
+} */
 
-.project-one, .project-two {
-  animation-play-state: paused;
-}
-
-.project-one:hover, .project-two:hover {
-  animation-play-state: running;
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 0;
+  grid-row-gap: 2.5rem;
 }
 
 .project-one {
@@ -141,6 +121,31 @@ img {
   width: 60vh;
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
   color: white;
+  grid-column: 1;
+  grid-row: 1;
+  margin: 0 auto;
+  
+}
+
+.project-tech-one {
+  grid-column: 2;
+  grid-row: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 60%;
+  /* border-top: 2px solid black; */
+  /* border-right: 2px solid black; */
+  /* box-shadow: 10px 5px 5px gray; */
+  /* border-bottom: 2px solid black; */
+  /* border-top: 2px solid black; */
+}
+
+.btn-parent {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: .5rem;
 }
 
 .project-one:hover {
@@ -158,6 +163,21 @@ img {
   width: 60vh;
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
   color: white;
+  grid-column: 1;
+  grid-row: 2;
+  margin: 0 auto;
+}
+
+.project-tech-two{
+  grid-column: 2;
+  grid-row: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* border-bottom: 2px solid black; */
+  border-top: 2px solid black;
+  /* border-right: 2px solid black; */
+  width: 60%;
 }
 
 .project-two:hover {
@@ -167,8 +187,7 @@ img {
   background-repeat: no-repeat;
 }
 
-#ptwo {
-  margin-top: 5.75rem;
+.ptwo {
   color: black;
   font-weight: bold;
   text-shadow: 1px 1px 3px white;
@@ -187,6 +206,9 @@ img {
   width: 60vh;
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
   color: white;
+  grid-column: 1;
+  grid-row: 3;
+  margin: 0 auto;
 }
 
 .project-three:hover {
@@ -194,6 +216,17 @@ img {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.project-tech-three{
+  grid-column: 2;
+  grid-row: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* border-bottom: 2px solid black; */
+  border-top: 2px solid black;
+  width: 60%;
 }
 
 .project-four {
@@ -204,6 +237,9 @@ img {
   width: 60vh;
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
   color: white;
+  grid-column: 1;
+  grid-row: 4;
+  margin: 0 auto;
 }
 
 .project-four:hover {
@@ -211,6 +247,21 @@ img {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.project-tech-four{
+  grid-column: 2;
+  grid-row: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* border-bottom: 2px solid black; */
+  border-top: 2px solid black;
+  width: 60%;
+}
+
+.project-tech-one a, .project-tech-two a, .project-tech-three a, .project-tech-four a {
+  text-decoration: none;
 }
 
 .p {
