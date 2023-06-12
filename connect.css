@@ -123,7 +123,7 @@ nav {
 .menu__box {
   display: block;
   position: fixed;
-  top: 2.6rem;
+  top: 2.75rem;
   left: 100%;
   width: 90vw;
   height: 20vh;
@@ -138,7 +138,6 @@ nav {
   display: block;
   padding: 4px 10px;
   color: #fef7f6;
-  text-shadow: 1px 1px 3px white;
   font-family: "Montserrat", sans-serif;
   font-size: 15px;
   font-weight: 600;
