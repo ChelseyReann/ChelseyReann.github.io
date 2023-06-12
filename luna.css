@@ -3,6 +3,55 @@ body {
     font-family: 'Montserrat', sans-serif;
     background-color: #ece7e1;
   }
+
+  a, a:visited {
+    color:#48392A;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0 11px 0;
+    margin: 0;
+    border-bottom: 2px solid #48392A;
+    text-shadow: 1px 1px 3px white;
+    position: sticky;
+    top: 0;
+    background-color: rgba(235, 231, 226, 0.9);
+    z-index: 100;
+    color: #48392A;
+  }
+  
+  .nav-name {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  .nav-name a{
+    margin-left: 10px;
+  }
+
+  .nav-name a:hover {
+    text-shadow: none;
+  }
+  
+  .nav-links {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .nav-links a{
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
   .coverPageSlide {
     height: 80vh;
     width: 100vw;
@@ -18,6 +67,7 @@ body {
 
   h1, p {
     text-align: center;
+    color: #48392A
   }
   
   @keyframes myAnimation {
@@ -37,6 +87,7 @@ body {
 
   #menu__toggle {
     opacity: 0;
+    display: none;
   }
   #menu__toggle:checked + .menu__btn > span {
     transform: rotate(45deg);
@@ -55,11 +106,12 @@ body {
   .menu__btn {
     position: fixed;
     top: 20px;
-    left: 20px;
+    right: 20px;
     width: 26px;
     height: 26px;
     cursor: pointer;
-    z-index: 1;
+    z-index: 101;
+    display: none
   }
   .menu__btn > span,
   .menu__btn > span::before,
@@ -82,29 +134,62 @@ body {
   .menu__box {
     display: block;
     position: fixed;
-    top: 0;
-    left: -100%;
-    width: 300px;
-    height: 100%;
+    top: 2.6rem;
+    left: 100%;
+    width: 90vw;
+    height: 20vh;
     margin: 0;
-    padding: 80px 0;
     list-style: none;
     background-color: rgb(26, 24, 24, 0.7);
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
     transition-duration: 0.25s;
+    z-index: 101;
   }
   .menu__item {
     display: block;
-    padding: 12px 24px;
+    padding: 4px 10px;
     color: #fef7f6;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 25px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
     font-weight: 600;
     text-decoration: none;
     transition-duration: 0.25s;
-    text-align: center;
+    text-align: right;
+  }
+  
+  .menu__item:hover {
+    text-decoration: underline;
+    font-size: 20px;
   }
 
-  .menu__item:hover{
-    text-decoration: underline;
+
+  @media screen and (max-width: 576px){
+    .menu__btn {
+      display: block;
+    }
+  
+    .nav-links {
+      display: none;
+    }
+
+    .coverPageSlide {
+      height: 50vh;
+      width: 90vw;
+      margin: auto;
+    }
+
+    p {
+      margin: auto;
+      width: 80%;
+      text-align: center;
+    }
+
+    a, a:visited {
+      color:#fef7f6;
+    }
+  
+    .nav-name a{
+      color: #48392A;
+    }
   }
+  

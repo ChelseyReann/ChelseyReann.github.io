@@ -11,11 +11,27 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
     <link rel="icon" type="image/x-icon" href="./assets/favicon2.ico"/>
     <title>Chelsey Alphonso</title>
   </head>
   <body>
-    <h1 class="connect">Hello there!</h1>
+    <nav>
+      <div class="nav-name">
+        <a>👩🏻‍💻</a>
+        <a>Chelsey Alphonso</a>
+      </div>
+      <div class="nav-links">
+        <a href="index.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="luna.html">My Happy Place</a>
+        <a href="contact.html">Let's Connect</a>
+        <a href="./assets/Chelsey_Alphonso_Tech_Resume.pdf" target="_blank">Resume</a>
+      </div>
+    </nav>
 
     <div class="hamburger-menu">
       <input id="menu__toggle" type="checkbox" />
@@ -31,7 +47,7 @@
         <li>
           <a
             class="menu__item"
-            href="./assets/Chelsey_Alphonso_Resume.pdf"
+            href="./assets/Chelsey_Alphonso_Tech_Resume.pdf"
             target="_blank"
             >Resume</a
           >
@@ -39,13 +55,18 @@
       </ul>
     </div>
 
-    <p>
+    <div>
+      <div class="bio-tags-container">
+        <h1><span class="bio-tags"></span></h1>
+      </div>
+    <!-- <h1 class='animate__animated animate__fadeInDown'>Hello there!</h1> -->
+    <p class='animate__animated animate__fadeInDown'>
       Want to work with me? Send me an email and let's chat!<br />
       <a href="mailto:chelseyreann@gmail.com" class="email"
         >chelseyreann@gmail.com</a
       >
     </p>
-    <p>
+    <p class='animate__animated animate__fadeInDown'>
       Find me on the Interwebs:
       <a
         href="https://www.linkedin.com/in/chelsey-alphonso"
@@ -53,7 +74,7 @@
         class="email"
         >LinkedIn</a
       >
-      /
+      |
       <a href="https://github.com/ChelseyReann" target="_blank" class="email"
         >Github</a
       >
@@ -62,5 +83,15 @@
     <div class="container">
       <img src="assets/lets-connect.gif" alt="let's connect animation" />
     </div>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+      const typed = new Typed (".bio-tags", {
+        strings : ["Hey there!"],
+        typeSpeed: 150,
+        backSpeed: 150,
+        loop: true
+
+      })
+    </script>
   </body>
 </html>

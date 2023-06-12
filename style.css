@@ -2,10 +2,75 @@ body {
   background-color: #ece7e1;
   font-family: "Montserrat", sans-serif;
   text-align: center;
+  margin: 0;
+}
+
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0 11px 0;
+  margin: 0;
+  border-bottom: 2px solid #48392A;
+  text-shadow: 1px 1px 3px white;
+  position: sticky;
+  top: 0;
+  background-color: rgba(235, 231, 226, 0.9);
+  z-index: 100;
+  color: #48392A;
+}
+
+.nav-name {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.nav-name a{
+  margin-left: 10px;
+}
+
+.nav-name a:hover {
+  text-shadow: none;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-links a{
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.bio-name {
+  color: #48392A; 
+  text-shadow: 1px 1px 3px white;
+  margin-bottom: 6px;
+
+}
+
+.bio-tags-container h2 {
+  margin-top: 0;
+  text-align: center;
+  color: #48392A; 
+  text-shadow: 1px 1px 3px white;
+}
+
+a, a:visited {
+  color:#48392A;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 #menu__toggle {
   opacity: 0;
+  display: none;
 }
 #menu__toggle:checked + .menu__btn > span {
   transform: rotate(45deg);
@@ -24,11 +89,12 @@ body {
 .menu__btn {
   position: fixed;
   top: 20px;
-  left: 20px;
+  right: 20px;
   width: 26px;
   height: 26px;
   cursor: pointer;
-  z-index: 1;
+  z-index: 101;
+  display: none
 }
 .menu__btn > span,
 .menu__btn > span::before,
@@ -37,7 +103,7 @@ body {
   position: absolute;
   width: 100%;
   height: 2px;
-  background-color: #131212;
+  background-color: #48392A;
   transition-duration: 0.2s;
 }
 .menu__btn > span::before {
@@ -51,37 +117,38 @@ body {
 .menu__box {
   display: block;
   position: fixed;
-  top: 0;
-  left: -100%;
-  width: 300px;
-  height: 100%;
+  top: 2.6rem;
+  left: 100%;
+  width: 90vw;
+  height: 20vh;
   margin: 0;
-  padding: 80px 0;
   list-style: none;
   background-color: rgb(26, 24, 24, 0.7);
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
   transition-duration: 0.25s;
+  z-index: 101;
 }
 .menu__item {
   display: block;
-  padding: 12px 24px;
+  padding: 4px 10px;
   color: #fef7f6;
   font-family: "Montserrat", sans-serif;
-  font-size: 25px;
+  font-size: 15px;
   font-weight: 600;
   text-decoration: none;
   transition-duration: 0.25s;
-  text-align: center;
+  text-align: right;
 }
 
 .menu__item:hover {
   text-decoration: underline;
-  font-size: 1.5rem;
+  font-size: 20px;
 }
 
 img {
   padding-top: 3rem;
   padding-right: 4rem;
+  z-index: -5;
 }
 
 .parent {
@@ -95,36 +162,36 @@ img {
 #bio {
   inline-size: 35%;
   padding-top: 1rem;
+  text-shadow: 1px 1px 3px white;
+  color: #48392A;
 }
 
-/* .project-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-} */
+.name {
+  text-shadow: 1px 1px 3px white;
+}
 
 .project-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(4, 1fr);
   grid-column-gap: 0;
-  grid-row-gap: 2.5rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  text-align: center;
 }
 
 .project-one {
-  background-image: url(./assets/tv-background.png);
+  background-image: url(./assets/books2.png);
   background-position: center;
   background-size: cover;
   height: 40vh;
   width: 60vh;
-  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+  box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.5);
   color: white;
   grid-column: 1;
   grid-row: 1;
-  margin: 0 auto;
-  
+  margin: auto;
+  z-index: 1;
 }
 
 .project-tech-one {
@@ -133,12 +200,10 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 60%;
-  /* border-top: 2px solid black; */
-  /* border-right: 2px solid black; */
-  /* box-shadow: 10px 5px 5px gray; */
-  /* border-bottom: 2px solid black; */
-  /* border-top: 2px solid black; */
+  width: 70%;
+  margin-left: 1rem;
+  z-index: 1;
+  color: #48392A;
 }
 
 .btn-parent {
@@ -146,26 +211,28 @@ img {
   flex-direction: row;
   justify-content: center;
   gap: .5rem;
+  z-index: 1;
 }
 
 .project-one:hover {
-  background-image: url(./assets/rtvt-gif.gif);
+  background-image: url(./assets/nyt-books-gif.gif);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .project-two {
-  background-image: url(./assets/ttt2.png);
+  background-image: url(./assets/digi-deck-builder.png);
   background-position: center;
   background-size: cover;
   height: 40vh;
   width: 60vh;
-  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+  box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.5);
   color: white;
   grid-column: 1;
   grid-row: 2;
-  margin: 0 auto;
+  margin: auto;
+  z-index: 1;
 }
 
 .project-tech-two{
@@ -174,45 +241,49 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* border-bottom: 2px solid black; */
-  border-top: 2px solid black;
-  /* border-right: 2px solid black; */
-  width: 60%;
+  border-top: 2px solid #48392A;
+  width: 70%;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  margin-left: 1rem;
+  z-index: 1;
+  color: #48392A;
 }
 
 .project-two:hover {
-  background-image: url(./assets/ttt-gif.gif);
+  background-image: url(./assets/digi-gif2.gif);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .ptwo {
-  color: black;
+  color: #48392A;
   font-weight: bold;
   text-shadow: 1px 1px 3px white;
 }
 
 .p-name {
-  text-shadow: 1px 1px 3px black;
+  text-shadow: 1px 1px 3px #48392A;
   font-size: 20px;
 }
 
 .project-three {
-  background-image: url(./assets/books.png);
+  background-image: url(./assets/tv-background.png);
   background-position: center;
   background-size: cover;
   height: 40vh;
   width: 60vh;
-  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+  box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.5);
   color: white;
   grid-column: 1;
   grid-row: 3;
-  margin: 0 auto;
+  margin: auto;
+  z-index: 1;
 }
 
 .project-three:hover {
-  background-image: url(./assets/nyt-books-gif.gif);
+  background-image: url(./assets/rtvt-gif.gif);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -224,26 +295,29 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* border-bottom: 2px solid black; */
-  border-top: 2px solid black;
-  width: 60%;
+  border-top: 2px solid #48392A;
+  width: 70%;
+  margin-left: 1rem;
+  z-index: 1;
+  color: #48392A;
 }
 
 .project-four {
-  background-image: url(./assets/digi-deck-builder.png);
+  background-image: url(./assets/ttt2.png);
   background-position: center;
   background-size: cover;
   height: 40vh;
   width: 60vh;
-  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+  box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.5);
   color: white;
   grid-column: 1;
   grid-row: 4;
-  margin: 0 auto;
+  margin: auto;
+  z-index: 1;
 }
 
 .project-four:hover {
-  background-image: url(./assets/digi-gif2.gif);
+  background-image: url(./assets/ttt-gif.gif);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -255,59 +329,49 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* border-bottom: 2px solid black; */
-  border-top: 2px solid black;
-  width: 60%;
+  border-top: 2px solid #48392A;
+  width: 70%;
+  margin-left: 1rem;
+  z-index: 1;
+  color: #48392A;
 }
 
 .project-tech-one a, .project-tech-two a, .project-tech-three a, .project-tech-four a {
   text-decoration: none;
 }
 
-.p {
-  font-size: 18px;
-  text-shadow: 1px 1px 3px black;
-}
-
-.p-one {
-  margin-top: 2rem;
-}
-
-.btn {
-  background-color: #ece7e1;
-  color: #131212;
-  font-family: "Montserrat", sans-serif;
-  padding: 0.5rem;
-}
-
 .btn2 {
-  background-color: #131212;
+  background-color: #1a140F;
   color: #ece7e1;
   font-family: "Montserrat", sans-serif;
   padding: 0.5rem;
-}
-
-.btn:hover {
-  background-color: #131212;
-  color: #ece7e1;
+  border-radius: .9rem;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
 }
 
 .btn2:hover {
   background-color: #ece7e1;
-  color: #131212;
+  color: #48392A;
+  box-shadow: offset;
 }
-
-/* .bio1:hover,
-.bio2:hover,
-.bio3:hover {
-  font-weight: 900;
-  font-size: 1.25rem;
-  color: purple;
-} */
 
 @media screen and (max-width: 576px) {
   body {
     text-align: center;
+  }
+
+  img {
+    padding-top: .75rem;
+    width: 40%;
+    padding-right: 0;
+  }
+
+  .menu__btn {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
   }
 
   .project-container {
@@ -318,18 +382,22 @@ img {
     align-items: center;
   }
 
-  .project-one {
-    margin-bottom: 2rem;
-    margin-left: 0;
+  .project-one, .project-two, .project-three, .project-four {
+    width: 85vw;
+    height: 30vh;
+    margin-top: 1.5rem;
   }
 
-  .project-two {
-    margin-bottom: 2rem;
-    margin-left: 0;
+  .project-tech-one, .project-tech-two, .project-tech-three, .project-tech-four {
+    border-bottom: 2px solid #48392A;
+    border-top: none;
+    padding-bottom: 3rem;
+    width: 80%;
+    margin: 0
   }
 
-  .project-three {
-    margin-left: 0;
+  .project-tech-two {
+    padding-top: 0;
   }
 
   .btn:hover,
@@ -353,13 +421,16 @@ img {
   }
 
   #bio {
-    font-size: 70%;
+    font-size: 90%;
     padding-left: 0;
-    inline-size: 50%;
+    inline-size: 70%;
   }
 
-  img {
-    width: 40%;
-    padding-right: 0;
+  a, a:visited {
+    color:#fef7f6;
+  }
+
+  .nav-name a{
+    color: #48392A;
   }
 }
