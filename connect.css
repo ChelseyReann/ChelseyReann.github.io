@@ -125,10 +125,10 @@ nav {
 .menu__box {
   display: block;
   position: fixed;
-  top: 2.95rem;
+  top: 3rem;
   left: 100%;
   width: 90vw;
-  height: 20vh;
+  height: 17vh;
   margin: 0;
   list-style: none;
   background-color: rgba(236, 231, 225, 0.9);
