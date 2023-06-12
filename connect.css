@@ -61,7 +61,7 @@ nav {
 }
 
 .nav-name a:hover {
-  text-shadow: none;
+  text-decoration: none;
 }
 
 .nav-links {
