@@ -58,6 +58,7 @@ nav {
 
 .nav-name a{
   margin-left: 10px;
+  color: #ece7e1;
 }
 
 .nav-name a:hover {
@@ -67,6 +68,7 @@ nav {
 .nav-links {
   display: flex;
   justify-content: flex-end;
+  color: #ece7e1;
 }
 
 .nav-links a{
@@ -123,7 +125,7 @@ nav {
 .menu__box {
   display: block;
   position: fixed;
-  top: 2.75rem;
+  top: 2.8rem;
   left: 100%;
   width: 90vw;
   height: 20vh;
@@ -164,7 +166,7 @@ img{
 }
 
 a, a:visited {
-  color: white;
+  color: #ece7e1;
 }
 
 @media screen and (max-width: 576px){
@@ -201,6 +203,10 @@ a, a:visited {
     }
 
     a, a:visited {
+      color: #1a140F;
+    }
+
+    .menu__item a, .menu__item a:visited {
       color: #1a140F;
     }
 
